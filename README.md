@@ -24,7 +24,7 @@ nodejs的express框架，使用中间件body-parser解析POST请求的数据。
 
 ## 本地运行
 ```
-git clone https://github.com/xutao0793/music163-project.git 
+git clone https://github.com/xutao0793/firendsCircle-Dome.git 
 cd firendsCircle-server
 npm install
 node index.js
