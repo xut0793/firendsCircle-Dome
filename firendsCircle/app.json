@@ -1,0 +1,11 @@
+{
+    "pages": [
+        "pages/firendsCirle/firendsCircle",
+        "pages/edit/edit"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTextStyle": "black"
+    }
+}

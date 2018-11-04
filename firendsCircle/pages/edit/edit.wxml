@@ -1,0 +1,36 @@
+<!--pages/edit/edit.wxml-->
+
+<view class='edit-header'>
+    <text bindtap='saveEditOrNot'>取消</text>
+    <text class='header-delive' bindtap='postData'>发表</text>
+</view>
+<view class='edit-main'>
+    <textarea class='edit-text' placeholder='这一刻的想法...' placeholder-style='color:#888' bindinput="getInputValue"></textarea>
+    <view class='edit-img'>
+        <view wx:for="{{imgArr}}" wx:key="{{index}}">
+            <image src='{{item}}' mode='aspectFill' />
+        </view>
+        <view class='iconfont icon-plus' catchtap='chooseImage'></view>
+    </view>
+</view>
+<view class='edit-footer'>
+    <view class='footer-row' bindtap='chooseLocation'>
+        <text class='iconfont icon-zuobiaonormal'></text>
+        <text>所在位置</text>
+        <text class='iconfont icon-arrow-right'></text>
+    </view>
+    <view class='footer-row'>
+        <text class='iconfont icon-touxiang'></text>
+        <text>谁可以看</text>
+        <text class='iconfont icon-arrow-right'></text>
+    </view>
+    <view class='footer-row'>
+        <text class='iconfont icon-at'></text>
+        <text>提醒谁看</text>
+        <text class='iconfont icon-arrow-right'></text>
+    </view>
+    <view class='footer-row'>
+        <text class='iconfont icon-qqkongjian'></text>
+        <text class='iconfont icon-qq'></text>
+    </view>
+</view>

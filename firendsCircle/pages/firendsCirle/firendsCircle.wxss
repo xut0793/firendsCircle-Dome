@@ -1,0 +1,131 @@
+/* pages/firendsCirle/firendsCircle.wxss */
+@import '../../lib/iconfont/iconfont.wxss';
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30rpx;
+    /* background-color: rgba(87,107,149,0.1); */
+    height: 30pt;
+}
+.header > text:nth-child(2){
+    font-size: 14pt;
+    font-weight: bold;
+}
+button {
+    margin: 100rpx 50rpx;
+}
+.single {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    padding: 40rpx 30rpx;
+    border-bottom: 1rpx solid rgba(87,107,149,0.1);
+}
+.avatar {
+    width: 100rpx;
+    height: 100rpx;
+    margin-right: 30rpx;
+    background-color: blue;
+}
+.main {
+    flex-grow: 1;
+    width: calc(100% - 180rpx);
+}
+.nickname {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #576b95;
+    line-height: 1.5rem;
+}
+.main-comtent {
+    font-size: 13pt;
+    line-height: 20pt;
+    overflow: hidden;
+}
+.comtent-showOrHide {
+    font-size: 13pt;
+    color: #576b95;
+}
+.imgArea {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 30rpx;
+}
+.imgArea  image {
+    width: 160rpx;
+    height: 160rpx;
+    margin: 0 10rpx 10rpx 0;
+}
+.location {
+    font-size: 8pt;
+    line-height: 16pt;
+    color: #576b95;
+}
+.timeArea {
+    font-size: 8pt;
+    line-height: 20pt;
+    color: #888;
+    position: relative;
+    /* display: flex;
+    justify-content: space-between; */
+}
+.timeArea-right {
+    float: right;
+}
+.timeArea .icon-pinglun1 {
+    font-size: 16pt;
+    color: #576b95;
+}
+.zan-pinglun {
+    position: absolute;
+    bottom: 0;
+    right: 60rpx;
+    display: block;
+    background-color: #4C5154;
+    height: 20pt;
+    border-radius: 10rpx;
+    font-size: 13pt;
+    color: white;
+    line-height: 20pt;
+    text-align: center;
+    padding: 20rpx 0;
+}
+.zan-pinglun > .iconfont {
+    display: inline-block;
+    width: 60pt;
+}
+.zan-pinglun > .icon-xin {
+    border-right: 1rpx solid #353535;
+}
+.commentArea {
+    font-size: 11pt;
+    line-height: 20pt;
+    background-color: rgba(87,107,149,0.1);
+    position: relative;
+}
+/* .commentArea:before {
+    content: "";
+    display: block;
+    border: 5rpx solid transparent;
+    border-bottom-color: rgba(87,107,149,0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+.like {
+    color: #576b95;
+    font-weight: bold;
+    border-bottom: 1rpx solid rgba(87,107,149,0.2);
+    padding: 0 20rpx;
+    
+}
+.like .icon-xin {
+    font-size: 10pt;
+    margin-right: 10rpx;
+}
+.comment-nickname {
+    padding: 0 20rpx;
+    color: #576b95; 
+    font-weight: bold;
+}

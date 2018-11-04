@@ -1,0 +1,52 @@
+<!--pages/firendsCirle/firendsCircle.wxml-->
+<view bindtap='hideZanAndPinglun'>
+    <view class='header'>
+        <text class='iconfont icon-arrow-right1'>发现</text>
+        <text>朋友圈</text>
+        <text class='iconfont icon-xiangji' bindtap='showEditPage'></text>
+    </view>
+    <button type='primary' size='default' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="tapBtnToGetUserInfo"> 授权获取头像和昵称 </button>
+    <block wx:else>
+        <view class='single' wx:for="{{deliverData}}" wx:key="{{index}}">
+           <image class="avatar" src="{{item.avatarUrl}}" mode="cover"></image>
+            <view class='main'>
+                <view class='nickname'>{{item.nickName}}</view>
+                <view wx:if="{{item.textareaTxt != 'null'}}">
+                    <view class='main-comtent' style='{{isShowOrHideComtent ? "" : "max-height: 60pt"}}'>
+                    {{item.textareaTxt}}
+                    </view>
+                    <text class='comtent-showOrHide' catchtap='ShowOrHideComtent'>{{allOrPart}}</text>
+                </view>
+                <view class='imgArea' wx:if="{{!item.imgArea}}" bindtap='showImg' data-Outidx="{{index}}">
+                     <view wx:for="{{item.imgArr}}" wx:key="{{index}}">
+                        <image src="{{item}}" mode='aspectFill' data-imgidx="{{index}}" />
+                    </view>
+                </view>
+                <view class='location' wx:if="{{item.location != 'null'}}">
+                    <text class='iconfont icon-zuobiaonormal'></text>
+                    <text>{{item.location}}</text>
+                </view>
+                <view class='timeArea'>
+                    <text>{{item.time}}</text>
+                    <view class='timeArea-right'>
+                        <view class='zan-pinglun' wx:if="{{showZanAndPinglunNum == item.id}}">
+                            <text class='iconfont icon-xin' data-idx="{{index}}" catchtap='dianzan'> 赞</text>
+                            <text class='iconfont icon-pinglun'> 评论</text>
+                        </view>
+                        <text class='iconfont icon-pinglun1' data-idx="{{index}}" catchtap='showZanAndPinglun'></text>
+                    </view>
+                </view>
+                <view class='commentArea'>
+                    <view class='like' wx:if="{{item.zan}}">
+                        <text class='iconfont icon-xin'></text>
+                        <text>{{item.zan}}</text>
+                    </view>
+                    <!-- <view class='comment'>
+                        <text class='comment-nickname'>用户名:</text>
+                        <text>评论内容</text>
+                    </view> -->
+                </view>
+            </view>
+        </view>
+    </block>
+</view>
