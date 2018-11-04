@@ -1,12 +1,12 @@
 # 朋友圈
-#####技术栈：微信小程序
+##### 技术栈：微信小程序
 
 ###### 页面截图
-![功能截图](./img/img.png)
+![功能截图](./firendsCircle/img/img.png)
 ###### 功能实现
-![功能截图](./img/show.gif)
+![功能截图](./firendsCircle/img/show.gif)
 ###### 功能脑图
-![功能截图](./img/mind.png)
+![功能截图](./firendsCircle/img/mind.png)
 ###### 调用API
 - [X] 获取用户信息（头像和昵称） wx.getSetting / wx.getUserInfo
 - [X] 本地服务器数据请求 wx.request
